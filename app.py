@@ -31,6 +31,9 @@ def predict():
     elif modelType == 'SVM':
         pickle.load(open('SVM.pkl', 'rb'))
         model = pickle.load(open('SVM.pkl', 'rb'))
+    elif modelType == 'XGB':
+        pickle.load(open('XGB.pkl', 'rb'))
+        model = pickle.load(open('XGB.pkl', 'rb'))
 
     prediction = model.predict(input_query)[0]
 
